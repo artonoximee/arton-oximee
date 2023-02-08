@@ -71,9 +71,12 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
   padding: 20px 0 20px 0;
-  border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
   cursor: pointer;
+}
+
+.right-pane--list--item.first {
+  border-top: 1px solid #ffffff;
 }
 
 .right-pane--footer {
