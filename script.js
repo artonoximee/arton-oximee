@@ -45,3 +45,8 @@ modal.addEventListener('click', function (e) {
   e.preventDefault();
   modal.classList.remove('open');
 })
+
+// Current year
+
+const currentYear = new Date().getFullYear();
+document.getElementById("currentYear").innerHTML = currentYear;
