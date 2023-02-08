@@ -1,21 +1,34 @@
 // Images
+const images = document.querySelectorAll("img.left-pane--image")
 
 const neueNationalgalerie = document.querySelector("#neue-nationalgalerie");
 const maisonLatapie = document.querySelector("#maison-latapie");
 const openOrientedObjects = document.querySelector("#open-oriented-objects");
 
-const image = document.querySelector("#img-viewer");
+const imgNeueNationalgalerie = document.querySelector("#img-neueNationalgalerie");
+const imgMaisonLatapie = document.querySelector("#img-maisonLatapie");
+const imgOpenOrientedObjects = document.querySelector("#img-openOrientedObjects");
+
 
 neueNationalgalerie.addEventListener("click", function() {
-  image.src = "imgs/neueNationalgalerie.jpg";
+  images.forEach((image) => {
+    image.classList.remove('visible');
+  });
+  imgNeueNationalgalerie.classList.add('visible')
 });
 
 maisonLatapie.addEventListener("click", function() {
-  image.src = "imgs/maisonLatapie.jpg";
+  images.forEach((image) => {
+    image.classList.remove('visible');
+  });
+  imgMaisonLatapie.classList.add('visible')
 });
 
 openOrientedObjects.addEventListener("click", function() {
-  image.src = "imgs/openOrientedObjects.jpg";
+  images.forEach((image) => {
+    image.classList.remove('visible');
+  });
+  imgOpenOrientedObjects.classList.add('visible')
 });
 
 // Modal

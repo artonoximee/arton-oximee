@@ -34,7 +34,6 @@ a:hover {
   box-sizing: border-box;         /* Opera/IE 8+ */
   display: flex;
   flex-direction: column-reverse;
-
 }
 
 .right-pane {
@@ -50,7 +49,14 @@ a:hover {
 .left-pane--image {
   width: 100%;
   height: auto;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
+
+.left-pane--image.visible {
+  opacity: 1;
+ }
 
 .right-pane--header {
   margin-top: 20vh;
@@ -84,7 +90,7 @@ a:hover {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.1);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   z-index: 3;
   display: flex;
   justify-content: center;
@@ -105,4 +111,8 @@ a:hover {
   width: 40%; 
   max-height: 80%;
   z-index: 2;
+}
+
+.card > p {
+  padding: 20px 0 0 0;
 }
