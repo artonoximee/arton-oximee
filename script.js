@@ -58,6 +58,7 @@ openOrientedObjects.addEventListener("click", function() {
 
 const modalOpener = document.querySelector("#modal-opener");
 const modal = document.querySelector("#info-modal");
+const modalLinks = document.querySelectorAll(".modal-link");
 
 modalOpener.addEventListener('click', function (e) {
   e.preventDefault();
@@ -65,9 +66,13 @@ modalOpener.addEventListener('click', function (e) {
 })
 
 modal.addEventListener('click', function (e) {
-  e.preventDefault();
-  modal.classList.remove('open');
-})
+  if (e.target.classList.contains('modal-link')) {
+    e.stopPropagation();
+  } else {
+    e.preventDefault();
+    modal.classList.remove('open');
+  }
+});
 
 // Current year
 
