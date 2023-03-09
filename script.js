@@ -13,6 +13,20 @@ const imgMaisonLatapie = document.querySelector("#img-maisonLatapie");
 const imgImmeubleVerdeaux = document.querySelector("#img-immeubleVerdeaux");
 const imgOpenOrientedObjects = document.querySelector("#img-openOrientedObjects");
 
+const leftPane = document.querySelector(".left-pane");
+const rightPane = document.querySelector(".right-pane");
+
+leftPane.addEventListener("click", function() {
+  if (window.innerWidth > 956) {
+    if (leftPane.classList.contains('zoom')) {
+      leftPane.classList.remove('zoom');
+      rightPane.classList.remove('zoom');
+    } else {
+      leftPane.classList.add('zoom');
+      rightPane.classList.add('zoom');
+    }
+  }
+});
 
 neueNationalgalerie.addEventListener("click", function() {
   images.forEach((image) => {
@@ -102,3 +116,10 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
+
+function scrollToBottom() {
+  if (window.innerWidth > 956) {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
+}
+
