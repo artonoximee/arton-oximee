@@ -56,21 +56,37 @@ openOrientedObjects.addEventListener("click", function() {
 
 // Modal
 
-const modalOpener = document.querySelector("#modal-opener");
-const modal = document.querySelector("#info-modal");
+const infoModalOpener = document.querySelector("#info-modal-opener");
+const infoModal = document.querySelector("#info-modal");
+const techModalOpener = document.querySelector("#tech-modal-opener");
+const techModal = document.querySelector("#tech-modal");
 const modalLinks = document.querySelectorAll(".modal-link");
 
-modalOpener.addEventListener('click', function (e) {
+infoModalOpener.addEventListener('click', function (e) {
   e.preventDefault();
-  modal.classList.add('open');
+  infoModal.classList.add('open');
 })
 
-modal.addEventListener('click', function (e) {
+infoModal.addEventListener('click', function (e) {
   if (e.target.classList.contains('modal-link')) {
     e.stopPropagation();
   } else {
     e.preventDefault();
-    modal.classList.remove('open');
+    infoModal.classList.remove('open');
+  }
+});
+
+techModalOpener.addEventListener('click', function (e) {
+  e.preventDefault();
+  techModal.classList.add('open');
+})
+
+techModal.addEventListener('click', function (e) {
+  if (e.target.classList.contains('modal-link')) {
+    e.stopPropagation();
+  } else {
+    e.preventDefault();
+    techModal.classList.remove('open');
   }
 });
 
