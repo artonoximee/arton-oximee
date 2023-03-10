@@ -18,7 +18,11 @@
 </head>
 <body>
 
-  <div class="container">
+  <div id="loading">
+    <span class="loader"></span>
+  </div>
+
+  <div class="container" id="content">
     <div class="left-pane">
       <img src="imgs/neueNationalgalerie.jpg" alt="Neue Nationalgalerie, Mies Van Der Rohe, 1968" class="left-pane--image visible" id="img-neueNationalgalerie"/>
       <img src="imgs/armstronRubberHQ.jpg" alt="Armstrong Rubber HQ, Marcel Breuer, 1969" class="left-pane--image" id="img-armstrongRubber"/>
@@ -101,7 +105,7 @@
   </div>
 
   <div class="modal backdrop" id="info-modal">
-    <div class="card">
+    <div class="card" id="info-modal-content">
       <p>
         Arton Oximée est un service de modélisation 3D crée par Antoine Vercoutère, diplômé d'architecture HMONP de l'ENSA Paris Malaquais. En 2017, il co-fonde avec Maud Lévy le collectif <a href="http://mlav.land" class="modal-link" target="_blank">MLAV.LAND↗</a>, un territoire de recherches, d’expérimentation, d’investigations, et de production architecturale.
       </p>
@@ -118,7 +122,7 @@
   </div>
 
   <div class="modal backdrop" id="tech-modal">
-    <div class="card">
+    <div class="card" id="tech-modal-content">
       <div class="logos-container">
         <img src="imgs/logos/logo-rhino.png" class="logo-software" alt="Logo Rhino3D" />
         <img src="imgs/logos/logo-sketchup.png" class="logo-software" alt="Logo SketchUp Pro" />

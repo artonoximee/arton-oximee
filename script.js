@@ -1,4 +1,5 @@
 // Images
+
 const images = document.querySelectorAll("img.left-pane--image")
 
 const neueNationalgalerie = document.querySelector("#neue-nationalgalerie");
@@ -72,13 +73,16 @@ openOrientedObjects.addEventListener("click", function() {
 
 const infoModalOpener = document.querySelector("#info-modal-opener");
 const infoModal = document.querySelector("#info-modal");
+const infoModalContent = document.querySelector("#info-modal-content");
 const techModalOpener = document.querySelector("#tech-modal-opener");
 const techModal = document.querySelector("#tech-modal");
+const techModalContent = document.querySelector("#tech-modal-content");
 const modalLinks = document.querySelectorAll(".modal-link");
 
 infoModalOpener.addEventListener('click', function (e) {
   e.preventDefault();
   infoModal.classList.add('open');
+  infoModalContent.style.display = "block";
 })
 
 infoModal.addEventListener('click', function (e) {
@@ -87,12 +91,14 @@ infoModal.addEventListener('click', function (e) {
   } else {
     e.preventDefault();
     infoModal.classList.remove('open');
+    infoModalContent.style.display = "none";
   }
 });
 
 techModalOpener.addEventListener('click', function (e) {
   e.preventDefault();
   techModal.classList.add('open');
+  techModalContent.style.display = "block";
 })
 
 techModal.addEventListener('click', function (e) {
@@ -101,6 +107,7 @@ techModal.addEventListener('click', function (e) {
   } else {
     e.preventDefault();
     techModal.classList.remove('open');
+    techModalContent.style.display = "none";
   }
 });
 
@@ -123,3 +130,16 @@ function scrollToBottom() {
   }
 }
 
+// Loader
+
+window.addEventListener("load", function() {
+  const loadingPage = document.querySelector("#loading");
+  const content = document.querySelector("#content");
+  const backdrops = document.querySelectorAll(".backdrop");
+
+  loadingPage.style.display = "none";
+  content.style.display = "block";
+  backdrops.forEach((backdrop) => {
+    backdrop.style.display = "flex"; 
+  })
+});
