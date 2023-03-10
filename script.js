@@ -18,7 +18,7 @@ const leftPane = document.querySelector(".left-pane");
 const rightPane = document.querySelector(".right-pane");
 
 leftPane.addEventListener("click", function() {
-  if (window.innerWidth > 956) {
+  if (window.innerWidth > 925) {
     if (leftPane.classList.contains('zoom')) {
       leftPane.classList.remove('zoom');
       rightPane.classList.remove('zoom');
@@ -119,13 +119,13 @@ document.getElementById("currentYear").innerHTML = currentYear;
 // Scroll to top function, when mobile
 
 function scrollToTop() {
-  if (window.innerWidth < 956) {
+  if (window.innerWidth < 925) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
 
 function scrollToBottom() {
-  if (window.innerWidth > 956) {
+  if (window.innerWidth > 925) {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   }
 }
