@@ -2,12 +2,14 @@
 
 const images = document.querySelectorAll("img.left-pane--image")
 
+const immeubleBastille = document.querySelector("#immeuble-bastille");
 const neueNationalgalerie = document.querySelector("#neue-nationalgalerie");
 const armstrongRubber = document.querySelector("#armstrong-rubber-hq");
 const maisonLatapie = document.querySelector("#maison-latapie");
 const immeubleVerdeaux = document.querySelector("#immeuble-verdeaux");
 const openOrientedObjects = document.querySelector("#open-oriented-objects");
 
+const imgImmeubleBastille = document.querySelector("#img-immeubleBastille")
 const imgNeueNationalgalerie = document.querySelector("#img-neueNationalgalerie");
 const imgArmstrongRubber = document.querySelector("#img-armstrongRubber");
 const imgMaisonLatapie = document.querySelector("#img-maisonLatapie");
@@ -27,6 +29,14 @@ leftPane.addEventListener("click", function() {
       rightPane.classList.add('zoom');
     }
   }
+});
+
+immeubleBastille.addEventListener("click", function() {
+  images.forEach((image) => {
+    image.classList.remove('visible');
+  });
+  imgImmeubleBastille.classList.add('visible');
+  scrollToTop();
 });
 
 neueNationalgalerie.addEventListener("click", function() {

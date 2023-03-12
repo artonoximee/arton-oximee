@@ -120,7 +120,7 @@ a:hover {
  }
 
 .right-pane--header {
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 
 @media only screen and (max-width: 925px) {
