@@ -1,0 +1,52 @@
+{
+  "models":[
+    {
+      "id":"1",
+      "title":"Immeuble type Haussmannien",
+      "architect":"Ernest Guigardet",
+      "year":"1897",
+      "image":"immeubleBastille.webp",
+      "cover":"false"
+    },
+    {
+      "id":"2",
+      "title":"Neue Nationalgalerie",
+      "architect":"Mies Van Der Rohe",
+      "year":"1968",
+      "image":"neueNationalgalerie.webp",
+      "cover":"true"
+    },
+    {
+      "id":"3",
+      "title":"Armstrong Rubber Headquarters",
+      "architect":"Marcel Breuer",
+      "year":"1969",
+      "image":"armstrongRubberHQ.webp",
+      "cover":"false"
+    },
+    {
+      "id":"4",
+      "title":"Maison Latapie",
+      "architect":"Lacaton & Vassal",
+      "year":"1993",
+      "image":"maisonLatapie.webp",
+      "cover":"false"
+    },
+    {
+      "id":"5",
+      "title":"Immeuble Verdeaux à Renens",
+      "architect":"Dreier Frenzel",
+      "year":"2018",
+      "image":"immeubleVerdeaux.webp",
+      "cover":"false"
+    },
+    {
+      "id":"6",
+      "title":"Open Oriented Objects",
+      "architect":"MLAV.LAND",
+      "year":"2023",
+      "image":"openOrientedObjects.webp",
+      "cover":"false"
+    }
+  ]
+}
